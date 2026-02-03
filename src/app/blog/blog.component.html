@@ -1,0 +1,43 @@
+<nav class="navbar glass-nav">
+  <div class="nav-container">
+
+    <div class="nav-left">
+      <span class="brand">My Travel Blog</span>
+    </div>
+
+    <div class="nav-right">
+      <a>Home</a>
+      <a>Destinations</a>
+      <a>Gallery</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1 class="hero-title">Welcome to Pranesh's Travel Blog 🌍</h1>
+  <p class="hero-subtitle">
+    A simple travel diary exploring beautiful places around Bangalore.
+  </p>
+
+  <div class="hero-buttons">
+    <button class="primary-btn" onclick="window.open('https://www.holidify.com/places/bangalore/sightseeing-and-things-to-do.html', '_blank')">Bangalore Spots</button>
+    <button class="secondary-btn" onclick="window.open('https://www.savaari.com/blog/places-to-visit-in-bangalore/', '_blank')"> Photos</button>
+    
+  </div>
+</section>
+
+<div class="posts">
+  <div class="card" *ngFor="let post of posts">
+    <img class="card-image"
+         [src]="post.image"
+         [alt]="post.city"
+         loading="lazy" />
+
+    <div class="card-content">
+      <h2>{{ post.city }}</h2>
+      <p>{{ post.description }}</p>
+    </div>
+  </div>
+</div>
